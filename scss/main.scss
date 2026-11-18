@@ -1,0 +1,22 @@
+@use "abstracts/variables";
+
+// 1. Base styles
+@use "base/reset";
+@use "base/typography";
+
+// 2. Layout
+@use "layout/header";
+@use "layout/sidebar";
+@use "layout/footer";
+
+// 3. Components
+@use "components/buttons";
+@use "components/cards";
+@use "components/social-dock";
+
+// 4. Pages
+@use "pages/home";
+@use "pages/work";
+@use "pages/about";
+@use "pages/skills";
+@use "pages/contact";

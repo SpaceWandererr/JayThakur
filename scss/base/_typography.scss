@@ -1,0 +1,166 @@
+@use "../abstracts/variables" as v;
+
+// ===================================
+// RESPONSIVE TYPOGRAPHY VARIABLES
+// ===================================
+
+:root {
+  // Headings
+  --fs-display: clamp(2.5rem, 6vw, 5.875rem);
+  --fs-h1: clamp(2.25rem, 4.5vw, 4rem);
+  --fs-h2: clamp(1.75rem, 3.2vw, 2.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-h4: clamp(1.125rem, 1.5vw, 1.375rem);
+
+  // Body text
+  --fs-body-lg: clamp(1rem, 1.2vw, 1.125rem);
+  --fs-body: clamp(0.875rem, 1vw, 1rem);
+  --fs-body-sm: clamp(0.75rem, 0.9vw, 0.875rem);
+
+  // Small text
+  --fs-caption: clamp(0.6875rem, 0.8vw, 0.8125rem);
+  --fs-label: clamp(0.625rem, 0.75vw, 0.75rem);
+
+  // Interactive elements
+  --fs-button: clamp(0.8125rem, 1vw, 0.9375rem);
+  --fs-nav: clamp(0.75rem, 0.9vw, 0.875rem);
+}
+
+// ===================================
+// GLOBAL TYPOGRAPHY
+// ===================================
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: v.$font-body;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.7;
+
+  color: var(--text);
+  background-color: var(--bg);
+
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+// ===================================
+// HEADINGS
+// ===================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: v.$font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--fs-h4);
+  line-height: 1.4;
+}
+
+h5,
+h6 {
+  font-size: var(--fs-body-lg);
+}
+
+// ===================================
+// PARAGRAPHS & TEXT
+// ===================================
+
+p {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+small {
+  font-size: var(--fs-caption);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+// ===================================
+// LINKS
+// ===================================
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// ===================================
+// BUTTONS & FORM ELEMENTS
+// ===================================
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+.btn {
+  font-size: var(--fs-button);
+}
+
+// ===================================
+// TEXT SELECTION
+// ===================================
+
+::selection {
+  color: var(--color-white, #ffffff);
+  background-color: v.$color-forest;
+}
+
+// ===================================
+// RESPONSIVE FINE-TUNING
+// ===================================
+
+@media (max-width: 600px) {
+  :root {
+    --fs-display: clamp(2.25rem, 10vw, 3.25rem);
+    --fs-h1: clamp(2rem, 8vw, 2.75rem);
+    --fs-h2: clamp(1.5rem, 6vw, 2rem);
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --fs-display: clamp(2rem, 9vw, 2.5rem);
+    --fs-body: 0.875rem;
+  }
+}

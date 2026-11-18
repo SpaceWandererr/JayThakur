@@ -1,0 +1,117 @@
+// ===================================
+// THAKUR JAY — DESIGN SYSTEM
+// ===================================
+
+// 1. BRAND COLORS
+$color-forest: #174d36;
+$color-emerald: #278653;
+$color-sage: #a5d6b7;
+$color-mint: #ddf0e3;
+
+// 2. NEUTRAL COLORS
+$color-background: #f2f5f1;
+$color-white: #ffffff;
+$color-dark: #171c19;
+$color-muted: #69736c;
+$color-border: #dce5de;
+
+// 3. TYPOGRAPHY
+$font-heading: "Manrope", sans-serif;
+$font-body: "DM Sans", sans-serif;
+
+// 4. FONT SIZES
+$font-xs: 12px;
+$font-sm: 14px;
+$font-base: 16px;
+$font-lg: 20px;
+$font-xl: 28px;
+$font-2xl: 40px;
+
+// 5. SPACING
+$space-xs: 8px;
+$space-sm: 16px;
+$space-md: 24px;
+$space-lg: 32px;
+$space-xl: 48px;
+$space-2xl: 64px;
+
+// 6. BORDER RADIUS
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 28px;
+$radius-full: 999px;
+
+// 7. TRANSITIONS
+$transition-fast: 200ms ease;
+$transition-normal: 300ms ease;
+$transition-slow: 500ms ease;
+
+// 8. LAYOUT
+$container-width: 1440px;
+$sidebar-width: 76px;
+
+// ===================================
+// CSS THEME COLOUR SYSTEM
+// ===================================
+
+:root {
+  color-scheme: light;
+
+  --bg: #eaf1eb;
+  --surface: #e1eee4;
+  --panel-bg: rgba(225, 238, 228, 0.88);
+
+  --text: #171c19;
+  --muted: #596b60;
+  --border: #c8ddce;
+
+  --button-text: #ffffff;
+  --button-hover-bg: #174d36;
+  --button-hover-text: #ffffff;
+
+  --sidebar-bg: #ffffff;
+  --sidebar-icon: #171c19;
+  --sidebar-active: #278653;
+  --sidebar-divider: #e5eee7;
+
+  --tooltip-bg: #174d36;
+  --tooltip-text: #ddf0e3;
+
+  --social-active-bg: #174d36;
+  --social-active-text: #ffffff;
+  --social-dot: #4be3a8;
+
+  --card-shadow: rgba(23, 77, 54, 0.12);
+  --profile-outline: rgba(39, 134, 83, 0.65);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #111a16;
+  --surface: #1d2a23;
+  --panel-bg: rgba(29, 42, 35, 0.88);
+
+  --text: #f2f5f1;
+  --muted: #b8c5bc;
+  --border: #34483b;
+
+  --button-text: #123524;
+  --button-hover-bg: #a5d6b7;
+  --button-hover-text: #174d36;
+
+  --sidebar-bg: #1d2a23;
+  --sidebar-icon: #f2f5f1;
+  --sidebar-active: #4be3a8;
+  --sidebar-divider: #34483b;
+
+  --tooltip-bg: #a5d6b7;
+  --tooltip-text: #174d36;
+
+  --social-active-bg: #a5d6b7;
+  --social-active-text: #174d36;
+  --social-dot: #4be3a8;
+
+  --card-shadow: rgba(0, 0, 0, 0.25);
+  --profile-outline: rgba(165, 214, 183, 0.45);
+}

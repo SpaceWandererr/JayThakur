@@ -1,0 +1,384 @@
+@use "../abstracts/variables" as v;
+
+// ========================================
+// SOCIAL DOCK — DESKTOP
+// ========================================
+
+.social-dock {
+  position: fixed;
+  top: 50%;
+  right: 12px;
+  z-index: 90;
+  transform: translateY(-50%);
+
+  width: 60px;
+  padding: 8px 0;
+
+  background: var(--social-dock-bg);
+  border-radius: 40px;
+
+  box-shadow: 0 12px 35px var(--social-dock-shadow);
+
+  transition:
+    background v.$transition-normal,
+    box-shadow v.$transition-normal;
+
+  // Hamburger toggle is desktop-hidden
+  &__toggle {
+    display: none;
+  }
+}
+
+.social-dock__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// ========================================
+// SOCIAL LINKS
+// ========================================
+
+.social-dock__link {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 88px;
+
+  color: var(--social-icon);
+  text-decoration: none;
+
+  transition: color v.$transition-normal;
+
+  &:not(:last-child) {
+    border-bottom: 3px solid var(--social-divider);
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+
+    width: 68px;
+    height: 68px;
+
+    border-radius: 50%;
+    background: var(--social-active-bg);
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform v.$transition-normal;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$color-emerald;
+    outline-offset: -5px;
+  }
+
+  i {
+    display: block;
+    position: relative;
+    z-index: 2;
+
+    font-size: 24px;
+
+    transform: rotate(90deg);
+
+    transition:
+      color v.$transition-normal,
+      transform v.$transition-normal;
+  }
+
+  &:hover i,
+  &:focus-visible i {
+    transform: rotate(90deg) scale(1.2);
+  }
+}
+
+// ========================================
+// BRAND COLOURS
+// ========================================
+
+.github:hover i,
+.github:focus-visible i {
+  color: #181717;
+}
+
+.linkedin:hover i,
+.linkedin:focus-visible i {
+  color: #0a66c2;
+}
+
+.instagram:hover i,
+.instagram:focus-visible i {
+  color: #e4405f;
+}
+
+.facebook:hover i,
+.facebook:focus-visible i {
+  color: #1877f2;
+}
+
+.codepen:hover i,
+.codepen:focus-visible i {
+  color: #171717;
+}
+
+// ========================================
+// MINT DOT
+// ========================================
+
+.social-dock__link:hover .social-dock__dot,
+.social-dock__link:focus-visible .social-dock__dot {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+// ========================================
+// LIGHT THEME
+// ========================================
+
+:root {
+  --social-dock-bg: #ffffff;
+  --social-dock-shadow: rgba(23, 77, 54, 0.08);
+  --social-icon: #171c19;
+  --social-divider: #f2f3f3;
+  --social-active-bg: #ddf0e3;
+  --social-dot: #4be3a8;
+}
+
+// ========================================
+// DARK THEME
+// ========================================
+
+[data-theme="dark"] {
+  --social-dock-bg: #1d2a23;
+  --social-dock-shadow: rgba(0, 0, 0, 0.25);
+  --social-icon: #f2f5f1;
+  --social-divider: #34483b;
+  --social-active-bg: #34483b;
+  --social-dot: #4be3a8;
+}
+
+// ========================================
+// TABLET & SMALL LAPTOP
+// HAMBURGER SOCIAL MENU
+// ========================================
+
+@media (max-width: 1100px) {
+  .social-dock {
+    top: 15px;
+    left: 18px;
+    right: auto;
+
+    width: 48px;
+    padding: 0;
+
+    transform: none;
+
+    border-radius: 15px;
+    z-index: 999;
+
+    &__toggle {
+      position: relative;
+
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      cursor: pointer;
+      list-style: none;
+
+      border-radius: 15px;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      span {
+        display: block;
+
+        width: 20px;
+        height: 2px;
+
+        border-radius: 10px;
+        background: var(--social-icon);
+
+        transition: 250ms ease;
+      }
+    }
+
+    &[open] {
+      .social-dock__toggle {
+        span:first-child {
+          transform: translateY(7px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:last-child {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .social-dock__nav {
+    position: absolute;
+    top: 58px;
+    left: 0;
+
+    min-width: 190px;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    background: var(--social-dock-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px var(--social-dock-shadow);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition:
+      opacity 200ms ease,
+      visibility 200ms ease,
+      transform 200ms ease;
+  }
+
+  .social-dock[open] .social-dock__nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .social-dock__link {
+    width: 100%;
+    height: 48px;
+
+    justify-content: flex-start;
+    gap: 14px;
+
+    padding: 0 14px;
+
+    border-bottom: 0 !important;
+    border-radius: 12px;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+
+      border-radius: 12px;
+    }
+
+    i {
+      width: 22px;
+      font-size: 19px;
+      text-align: center;
+
+      transform: none !important;
+    }
+
+    &:hover i,
+    &:focus-visible i {
+      transform: scale(1.12) !important;
+    }
+
+    // Show text labels in the dropdown
+    &::after {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--social-icon);
+    }
+  }
+
+  .github::after {
+    content: "GitHub";
+  }
+
+  .linkedin::after {
+    content: "LinkedIn";
+  }
+
+  .instagram::after {
+    content: "Instagram";
+  }
+
+  .facebook::after {
+    content: "Facebook";
+  }
+
+  .codepen::after {
+    content: "CodePen";
+  }
+}
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: 480px) {
+  .social-dock {
+    top: 15px;
+    left: 18px;
+
+    width: 44px;
+
+    &__toggle {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .social-dock__nav {
+    top: 53px;
+  }
+}
+
+// ========================================
+// EXTRA SMALL SCREENS
+// ========================================
+
+@media (max-width: 370px) {
+  .social-dock {
+    position: absolute;
+    top: 4.5rem;
+    left: 82.5vw;
+  }
+
+  .social-dock[open] .social-dock__nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-9.5rem);
+  }
+}
+
+@media (min-width: 1450px) {
+  .social-dock {
+    right: 2vw;
+  }
+}

@@ -1,0 +1,30 @@
+// ===================================
+// REUSABLE MIXINS
+// ===================================
+
+// Flexbox center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Flexbox between
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Responsive media query
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}

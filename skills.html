@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F2F5F1" />
+
+    <meta
+      name="description"
+      content="Explore the web development skills, technologies and tools of Jay Thakur."
+    />
+
+    <title>Skills | Jay Thakur</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply saved theme -->
+    <script>
+      (() => {
+        const theme = localStorage.getItem("portfolio-theme") || "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="sidebar__nav" aria-label="Main navigation">
+        <a href="index.html" class="sidebar__link" aria-label="Home">
+          <i data-lucide="house"></i>
+          <span class="sidebar__tooltip">Home</span>
+        </a>
+
+        <a href="about.html" class="sidebar__link" aria-label="About">
+          <i data-lucide="user-round"></i>
+          <span class="sidebar__tooltip">About</span>
+        </a>
+
+        <a href="work.html" class="sidebar__link" aria-label="Work">
+          <i data-lucide="briefcase-business"></i>
+          <span class="sidebar__tooltip">Work</span>
+        </a>
+
+        <a
+          href="skills.html"
+          class="sidebar__link is-active"
+          aria-label="Skills"
+          aria-current="page"
+        >
+          <i data-lucide="code-xml"></i>
+          <span class="sidebar__tooltip">Skills</span>
+        </a>
+
+        <a href="contact.html" class="sidebar__link" aria-label="Contact">
+          <i data-lucide="mail"></i>
+          <span class="sidebar__tooltip">Contact</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- SOCIAL DOCK -->
+    <details class="social-dock" open>
+      <summary
+        class="social-dock__toggle"
+        aria-label="Toggle social media links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </summary>
+
+      <nav class="social-dock__nav" aria-label="Social media links">
+        <a
+          href="https://github.com/SpaceWandererr"
+          class="social-dock__link github"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/thakurrjay24/"
+          class="social-dock__link linkedin"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/thakurrjay_24/"
+          class="social-dock__link instagram"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.facebook.com/thakurrjay.24/"
+          class="social-dock__link facebook"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://codepen.io/"
+          class="social-dock__link codepen"
+          aria-label="CodePen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-codepen"></i>
+        </a>
+      </nav>
+    </details>
+
+    <!-- MAIN CONTENT -->
+    <main class="skills-page">
+      <!-- TOP BAR -->
+      <div class="home__topbar">
+        <span class="availability">
+          <span class="status-dot"></span>
+          Always Learning & Improving
+        </span>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch theme"
+          title="Switch theme"
+        >
+          ☼
+        </button>
+      </div>
+
+      <!-- SKILLS HERO -->
+      <section class="skills-hero">
+        <div class="skills-hero__eyebrow">
+          <span class="skills-hero__line"></span>
+          MY TOOLKIT / 04
+        </div>
+
+        <h1>
+          Skills &
+          <span>Technologies.</span>
+        </h1>
+
+        <p class="skills-hero__description">
+          The technologies, tools and practical skills I use while building my
+          journey in web development.
+        </p>
+
+        <div class="skills-hero__meta">
+          <a href="#frontend">Frontend</a>
+          <a href="#backend">Backend</a>
+          <a href="#tools">Tools</a>
+          <a href="#workflow">Workflow</a>
+        </div>
+      </section>
+
+      <!-- FRONTEND SKILLS -->
+      <section class="skills-section" id="frontend">
+        <div class="skills-section__heading">
+          <div>
+            <span class="skills-section__eyebrow">01 / CORE TECHNOLOGIES</span>
+            <h2>Frontend Development</h2>
+          </div>
+
+          <span class="skills-section__count">04 TECHNOLOGIES</span>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-card__top">
+              <i class="devicon-html5-plain colored"></i>
+              <span>01</span>
+            </div>
+            <h3>HTML5</h3>
+            <p>Semantic structure and accessible web content.</p>
+            <span class="skill-card__category">Markup</span>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__top">
+              <i class="devicon-css3-plain colored"></i>
+              <span>02</span>
+            </div>
+            <h3>CSS3</h3>
+            <p>Responsive layouts, animations and visual styling.</p>
+            <span class="skill-card__category">Styling</span>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__top">
+              <i class="devicon-sass-original colored"></i>
+              <span>03</span>
+            </div>
+            <h3>SCSS</h3>
+            <p>Reusable styles, variables, nesting and modular architecture.</p>
+            <span class="skill-card__category">Preprocessor</span>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__top">
+              <i class="devicon-javascript-plain colored"></i>
+              <span>04</span>
+            </div>
+            <h3>JavaScript</h3>
+            <p>DOM manipulation, interactions and dynamic functionality.</p>
+            <span class="skill-card__category">Programming</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- BACKEND / MERN -->
+      <section class="skills-section" id="backend">
+        <div class="skills-section__heading">
+          <div>
+            <span class="skills-section__eyebrow">02 / EXPANDING MY STACK</span>
+            <h2>Backend & MERN</h2>
+          </div>
+
+          <span class="skills-section__count">CURRENT LEARNING</span>
+        </div>
+
+        <div class="learning-panel">
+          <div class="learning-panel__intro">
+            <div class="learning-panel__icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+
+            <div>
+              <h3>Building towards Full Stack</h3>
+              <p>
+                Expanding my frontend foundation by learning the technologies
+                behind full-stack web applications.
+              </p>
+            </div>
+          </div>
+
+          <div class="learning-grid">
+            <div class="learning-item">
+              <i class="devicon-react-original colored"></i>
+              <div>
+                <h4>React</h4>
+                <span>Frontend library</span>
+              </div>
+              <span class="learning-item__status">Learning</span>
+            </div>
+
+            <div class="learning-item">
+              <i class="devicon-nodejs-plain colored"></i>
+              <div>
+                <h4>Node.js</h4>
+                <span>JavaScript runtime</span>
+              </div>
+              <span class="learning-item__status">Learning</span>
+            </div>
+
+            <div class="learning-item">
+              <i class="devicon-express-original"></i>
+              <div>
+                <h4>Express.js</h4>
+                <span>Backend framework</span>
+              </div>
+              <span class="learning-item__status">Learning</span>
+            </div>
+
+            <div class="learning-item">
+              <i class="devicon-mongodb-plain colored"></i>
+              <div>
+                <h4>MongoDB</h4>
+                <span>Database</span>
+              </div>
+              <span class="learning-item__status">Learning</span>
+            </div>
+          </div>
+
+          <div class="learning-panel__footer">
+            <span><i class="fa-solid fa-compass"></i></span>
+            Currently working towards the MERN stack.
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOLS -->
+      <section class="skills-section" id="tools">
+        <div class="skills-section__heading">
+          <div>
+            <span class="skills-section__eyebrow"
+              >03 / DEVELOPMENT ENVIRONMENT</span
+            >
+            <h2>Tools I Use</h2>
+          </div>
+
+          <span class="skills-section__count">EVERYDAY TOOLS</span>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card">
+            <i class="devicon-vscode-plain colored"></i>
+            <div>
+              <h3>VS Code</h3>
+              <p>Code editor</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <i class="devicon-git-plain colored"></i>
+            <div>
+              <h3>Git</h3>
+              <p>Version control</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <i class="devicon-github-original"></i>
+            <div>
+              <h3>GitHub</h3>
+              <p>Code hosting</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <i class="devicon-chrome-plain colored"></i>
+            <div>
+              <h3>Chrome DevTools</h3>
+              <p>Debugging</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <i class="devicon-codepen-plain"></i>
+            <div>
+              <h3>CodePen</h3>
+              <p>Code experiments</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <i class="fa-solid fa-file-excel"></i>
+            <div>
+              <h3>MS Excel</h3>
+              <p>Spreadsheets</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <i class="fa-solid fa-file-word"></i>
+            <div>
+              <h3>MS Word</h3>
+              <p>Documents</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- WORKFLOW -->
+      <section class="skills-section" id="workflow">
+        <div class="skills-section__heading">
+          <div>
+            <span class="skills-section__eyebrow">04 / HOW I WORK</span>
+            <h2>Development Workflow</h2>
+          </div>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <span class="workflow-card__number">01</span>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Responsive Design</h3>
+            <p>Creating layouts that adapt across different screen sizes.</p>
+          </article>
+
+          <article class="workflow-card">
+            <span class="workflow-card__number">02</span>
+            <i class="fa-solid fa-table-cells-large"></i>
+            <h3>Layout Systems</h3>
+            <p>Working with Flexbox, CSS Grid and modern CSS layouts.</p>
+          </article>
+
+          <article class="workflow-card">
+            <span class="workflow-card__number">03</span>
+            <i class="fa-solid fa-bug"></i>
+            <h3>Debugging</h3>
+            <p>Finding issues, testing solutions and improving code.</p>
+          </article>
+
+          <article class="workflow-card">
+            <span class="workflow-card__number">04</span>
+            <i class="fa-solid fa-code-branch"></i>
+            <h3>Version Control</h3>
+            <p>Managing project changes using Git and GitHub.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- BOTTOM NOTE -->
+      <section class="skills-note">
+        <div class="skills-note__icon">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+
+        <div>
+          <span>THE JOURNEY CONTINUES</span>
+          <h2>Always learning. Always building.</h2>
+          <p>
+            Every project is an opportunity to learn something new, strengthen
+            my foundation and become a better developer.
+          </p>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="skills-footer">
+        <span>© 2026 Jay Thakur</span>
+        <span>Designed & built with curiosity.</span>
+      </footer>
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/main.js"></script>
+
+    <!-- LUCIDE -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <script src="./js/navigation.js"></script>
+  </body>
+</html>

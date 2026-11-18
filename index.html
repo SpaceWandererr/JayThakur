@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F2F5F1" />
+
+    <title>Jay Thakur | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply saved theme before page renders -->
+    <script>
+      (() => {
+        const theme = localStorage.getItem("portfolio-theme") || "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Devicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body style="display: flex; align-items: center; justify-content: center">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="sidebar__nav" aria-label="Main navigation">
+        <a href="index.html" class="sidebar__link is-active" aria-label="Home">
+          <i data-lucide="house"></i>
+          <span class="sidebar__tooltip">Home</span>
+        </a>
+
+        <a
+          href="about.html"
+          class="sidebar__link"
+          aria-label="About"
+          aria-current="page"
+        >
+          <i data-lucide="user-round"></i>
+          <span class="sidebar__tooltip">About</span>
+        </a>
+
+        <a href="work.html" class="sidebar__link" aria-label="Work">
+          <i data-lucide="briefcase-business"></i>
+          <span class="sidebar__tooltip">Work</span>
+        </a>
+
+        <a href="skills.html" class="sidebar__link" aria-label="Skills">
+          <i data-lucide="code-xml"></i>
+          <span class="sidebar__tooltip">Skills</span>
+        </a>
+
+        <a href="contact.html" class="sidebar__link" aria-label="Contact">
+          <i data-lucide="mail"></i>
+          <span class="sidebar__tooltip">Contact</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- SOCIAL DOCK -->
+    <details class="social-dock" open>
+      <!-- Hamburger Toggle -->
+      <summary
+        class="social-dock__toggle"
+        aria-label="Toggle social media links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </summary>
+
+      <!-- Social Links -->
+      <nav class="social-dock__nav" aria-label="Social media links">
+        <!-- GitHub -->
+        <a
+          href="https://github.com/SpaceWandererr"
+          class="social-dock__link github"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/thakurrjay24/"
+          class="social-dock__link linkedin"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/thakurrjay_24/"
+          class="social-dock__link instagram"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/thakurrjay.24/"
+          class="social-dock__link facebook"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <!-- CodePen -->
+        <a
+          href="https://codepen.io/"
+          class="social-dock__link codepen"
+          aria-label="CodePen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="social-dock__dot"></span>
+          <i class="fa-brands fa-codepen"></i>
+        </a>
+      </nav>
+    </details>
+
+    <!-- MAIN CONTENT -->
+    <main class="home">
+      <!-- TOP BAR -->
+      <div class="home__topbar">
+        <span class="availability">
+          <span class="status-dot"></span>
+          Available for Opportunities
+        </span>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Switch theme"
+        >
+          ☼
+        </button>
+      </div>
+
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <!-- PROFILE CARD -->
+        <div class="profile-card">
+          <div class="profile-card__image">
+            <img
+              src="./assets/images/JayThakur.jpeg"
+              alt="Portrait of Thakur Jay"
+            />
+          </div>
+
+          <div class="profile-card__info">
+            <h2>Thakur Jay</h2>
+
+            <p>ASPIRING FULL STACK DEVELOPER</p>
+
+            <span class="profile-card__line"></span>
+
+            <!-- TECHNOLOGY STACK -->
+            <div class="tech-stack">
+              <!-- Currently learning -->
+              <div class="tech-item">
+                <i class="devicon-html5-plain colored"></i>
+
+                <div class="tech-tooltip">
+                  <strong>HTML5</strong>
+                  <span>Learning · 75%</span>
+
+                  <div class="progress-track">
+                    <span style="width: 75%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-css3-plain colored"></i>
+
+                <div class="tech-tooltip">
+                  <strong>CSS3</strong>
+                  <span>Learning · 70%</span>
+
+                  <div class="progress-track">
+                    <span style="width: 70%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-javascript-plain colored"></i>
+
+                <div class="tech-tooltip">
+                  <strong>JavaScript</strong>
+                  <span>Learning · 60%</span>
+
+                  <div class="progress-track">
+                    <span style="width: 60%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-sass-original colored"></i>
+
+                <div class="tech-tooltip">
+                  <strong>SCSS</strong>
+                  <span>Learning · 65%</span>
+
+                  <div class="progress-track">
+                    <span style="width: 65%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Future learning -->
+              <div class="tech-item">
+                <i class="devicon-react-original"></i>
+
+                <div class="tech-tooltip">
+                  <strong>React</strong>
+                  <span>Upcoming</span>
+
+                  <div class="progress-track">
+                    <span style="width: 0%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-nodejs-plain"></i>
+
+                <div class="tech-tooltip">
+                  <strong>Node.js</strong>
+                  <span>Upcoming</span>
+
+                  <div class="progress-track">
+                    <span style="width: 0%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-express-original"></i>
+
+                <div class="tech-tooltip">
+                  <strong>Express.js</strong>
+                  <span>Upcoming</span>
+
+                  <div class="progress-track">
+                    <span style="width: 0%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-mongodb-plain"></i>
+
+                <div class="tech-tooltip">
+                  <strong>MongoDB</strong>
+                  <span>Upcoming</span>
+
+                  <div class="progress-track">
+                    <span style="width: 0%"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INTRODUCTION PANEL -->
+        <div class="intro-panel">
+          <span class="intro-panel__tag">INTRO</span>
+
+          <h1>Hey, I'm <span>Thakur Jay</span></h1>
+
+          <h2>Aspiring Full Stack Developer</h2>
+
+          <p class="intro-panel__description">
+            I'm learning to build clean, responsive and engaging web experiences
+            with a focus on detail, performance and real-world usability. I
+            enjoy turning ideas into functional and visually appealing digital
+            products.
+          </p>
+
+          <div class="intro-panel__actions">
+            <a href="work.html" class="btn btn--primary"> View My Work ↗ </a>
+
+            <a
+              href="assets/documents/Customer_Service_Thakur Jay Sinh.pdf"
+              class="btn btn--secondary"
+              download
+            >
+              ↓ Download CV
+            </a>
+          </div>
+
+          <!-- INTRO STATS -->
+          <div class="intro-stats">
+            <div class="intro-stats__item">
+              <h3>2+</h3>
+              <p>Projects<br />Completed</p>
+            </div>
+
+            <div class="intro-stats__item">
+              <h3>MERN</h3>
+              <p>Currently<br />Learning</p>
+            </div>
+
+            <div class="intro-stats__item">
+              <h3>Open</h3>
+              <p>For Opportunities<br />& Collaborations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCROLL INDICATOR
+      <div class="scroll-indicator">
+        <span>↓</span>
+        SCROLL DOWN
+      </div> -->
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/main.js"></script>
+
+    <!-- LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./js/navigation.js"></script>
+  </body>
+</html>
