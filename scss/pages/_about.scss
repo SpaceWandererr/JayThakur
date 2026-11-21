@@ -896,7 +896,7 @@
 
   .about-hero .about-intro {
     margin-left: -65px;
-    padding: 35px 35px 40px 105px;
+    padding: 35px 35px 40px 85px;
   }
 
   .about-content {
@@ -934,13 +934,14 @@
     gap: 20px;
   }
 
+  .about-hero .about-intro {
+    margin-left: -45px;
+    padding: 35px 25px 35px 85px;
+  }
+
   .about-hero .profile-card,
   .about-hero .about-intro {
     min-height: 520px;
-  }
-
-  .about-hero .about-intro {
-    padding: 28px;
   }
 
   .about-intro__top {
@@ -988,7 +989,7 @@
   .about-hero .about-intro {
     min-height: 520px;
     margin-left: -45px;
-    padding: 35px 25px 35px 85px;
+    padding: 35px 25px 35px 45px;
 
     border-radius: 0 32px 32px 0;
   }
@@ -1046,7 +1047,7 @@
 
   .about-hero .profile-card {
     width: 100%;
-    max-width: 480px;
+    max-width: 680px;
     min-height: 540px;
     margin: 0 auto;
   }
