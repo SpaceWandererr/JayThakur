@@ -244,7 +244,7 @@ body.page-leaving {
 }
 
 /* MOBILE */
-@media (max-width: 760px) {
+@media (max-width: 769px) {
   .page-next-bar {
     display: none;
     bottom: 15px;
@@ -1939,7 +1939,7 @@ button,
   min-height: 100vh;
   height: auto;
   overflow: visible;
-  padding: 110px clamp(45px, 8vw, 125px) 70px clamp(110px, 10vw, 155px);
+  padding: 110px clamp(45px, 8vw, 125px) 10px clamp(110px, 10vw, 155px);
   margin: 65px auto 95px;
   color: var(--text);
 }
@@ -2661,7 +2661,7 @@ button,
     padding-right: 100px;
     padding-left: 115px;
     padding-top: 0;
-    padding-bottom: 100px;
+    padding-bottom: 25px;
   }
   .certificate-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2706,7 +2706,7 @@ button,
 }
 @media (max-width: 768px) {
   .work-page {
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
   }
 }
 /* =========================================
@@ -3974,7 +3974,7 @@ button,
 ========================================== */
 @media (max-width: 1100px) and (min-width: 769px) {
   .about-page {
-    padding: 100px 0 80px 100px;
+    padding: 100px 10px 110px 100px;
   }
   .about-hero {
     grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.2fr);
@@ -4018,7 +4018,7 @@ button,
 ========================================== */
 @media (max-width: 768px) {
   .about-page {
-    padding: 110px 28px 50px;
+    padding: 110px 28px 90px;
   }
   .about-hero {
     width: 100%;
@@ -4090,7 +4090,7 @@ button,
 ========================================== */
 @media (max-width: 480px) {
   .about-page {
-    padding: 100px 18px 50px;
+    padding: 100px 18px 90px;
   }
   .about-hero {
     gap: 25px;
@@ -5618,7 +5618,7 @@ button,
 }
 @media (max-width: 768px) {
   .contact-page {
-    padding: 100px 60px 100px 60px;
+    padding: 100px 30px 100px 30px;
   }
   .contact-hero {
     margin-top: 40px;
