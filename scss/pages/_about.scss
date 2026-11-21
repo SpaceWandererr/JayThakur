@@ -1,14 +1,13 @@
 @use "../abstracts/variables" as v;
 
-// ==========================================
-// ABOUT PAGE — MAIN LAYOUT
-// ==========================================
+/* ==========================================
+   ABOUT PAGE — MAIN LAYOUT
+========================================== */
 
 .about-page {
   display: block;
   width: 100%;
   min-height: 100vh;
-
   padding: 200px 60px 80px 120px;
 
   background: var(--bg);
@@ -19,17 +18,8 @@
     color 300ms ease;
 }
 
-// ==========================================
-// ABOUT HERO — DESKTOP
-// Keep the original overlapping layout
-// ==========================================
-
 /* ==========================================
-   ABOUT PAGE
-========================================== */
-
-/* ==========================================
-   ABOUT HERO — DESKTOP LAYOUT
+   ABOUT HERO — DESKTOP
 ========================================== */
 
 .about-hero {
@@ -44,9 +34,7 @@
   gap: 28px;
 }
 
-/* ==========================================
-   PROFILE IMAGE CARD
-========================================== */
+/* PROFILE CARD */
 
 .about-hero .profile-card {
   position: relative;
@@ -66,9 +54,7 @@
   }
 }
 
-/* ==========================================
-   INTRO PANEL — BASE
-========================================== */
+/* INTRO PANEL */
 
 .about-hero .about-intro {
   position: relative;
@@ -104,18 +90,14 @@
     box-shadow 300ms ease;
 }
 
-/* ==========================================
-   INTRO TOP LABEL
-========================================== */
+/* INTRO TOP LABEL */
 
 .about-intro__top {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-
   margin-bottom: 30px;
 }
 
@@ -144,9 +126,7 @@
   letter-spacing: 1px;
 }
 
-/* ==========================================
-   INTRO HEADINGS
-========================================== */
+/* INTRO HEADINGS */
 
 .about-intro__heading {
   margin-bottom: 18px;
@@ -176,9 +156,7 @@
   }
 }
 
-/* ==========================================
-   PROFESSIONAL ROLE BADGE
-========================================== */
+/* PROFESSIONAL ROLE BADGE */
 
 .about-intro__role {
   display: inline-flex;
@@ -206,9 +184,7 @@
   background: var(--sidebar-active);
 }
 
-/* ==========================================
-   INTRO DESCRIPTION
-========================================== */
+/* INTRO DESCRIPTION */
 
 .about-hero .about-intro .intro-panel__description {
   max-width: 58ch;
@@ -219,9 +195,7 @@
   line-height: 1.85;
 }
 
-/* ==========================================
-   PROFILE HIGHLIGHTS
-========================================== */
+/* PROFILE HIGHLIGHTS */
 
 .about-intro__highlights {
   width: 100%;
@@ -262,9 +236,7 @@
   }
 }
 
-/* ==========================================
-   INTRO ACTION BUTTONS
-========================================== */
+/* INTRO ACTION BUTTONS */
 
 .about-hero .about-intro .intro-panel__actions {
   display: flex;
@@ -280,9 +252,7 @@
   }
 }
 
-/* ==========================================
-   BACKGROUND DECORATION
-========================================== */
+/* ABOUT HERO BACKGROUND DECORATION */
 
 .about-intro__decoration {
   position: absolute;
@@ -294,226 +264,33 @@
   opacity: 0.045;
 
   font-size: clamp(180px, 22vw, 250px);
-
   font-weight: 900;
   line-height: 1;
 
   pointer-events: none;
+  user-select: none;
 }
 
 /* ==========================================
-   LAPTOP
+   CONTENT BELOW HERO
 ========================================== */
-
-@media (max-width: 900px) {
-  .about-page {
-    // padding-top: 4.3rem;
-    padding-right: 35px;
-    padding-left: 110px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .about-page {
-    // padding-top: 4.3rem;
-    padding-right: 35px;
-    padding-left: 110px;
-  }
-
-  .about-hero {
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: 20px;
-  }
-
-  .about-hero .profile-card,
-  .about-hero .about-intro {
-    min-height: 520px;
-  }
-
-  .about-hero .about-intro {
-    padding: 28px;
-  }
-
-  .about-intro__top {
-    margin-bottom: 24px;
-  }
-
-  .about-intro__highlights {
-    margin-top: 20px;
-  }
-}
-
-/* ==========================================
-   TABLET
-========================================== */
-
-@media (max-width: 768px) {
-  .about-page {
-    padding: 10px 28px 120px 28px;
-  }
-
-  .about-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 25px;
-  }
-
-  .about-hero .profile-card {
-    width: 100%;
-    max-width: 480px;
-    min-height: 540px;
-    margin: 0 auto;
-  }
-
-  .about-hero .about-intro {
-    width: 100%;
-    min-height: auto;
-    height: auto;
-
-    margin-left: 0;
-    padding: 35px;
-
-    border-radius: 26px;
-  }
-
-  .about-intro__top {
-    margin-bottom: 25px;
-  }
-
-  .about-intro__heading h1 {
-    font-size: clamp(32px, 7vw, 45px);
-  }
-
-  .about-intro__heading h2 {
-    font-size: clamp(25px, 5vw, 32px);
-  }
-}
-
-/* ==========================================
-   SMALL MOBILE
-========================================== */
-
-@media (max-width: 480px) {
-  .about-page {
-    padding: 100px 18px 110px;
-  }
-
-  .about-hero {
-    gap: 20px;
-  }
-
-  .about-hero .profile-card {
-    min-height: 460px;
-  }
-
-  .about-hero .about-intro {
-    padding: 27px 22px;
-    border-radius: 22px;
-  }
-
-  .about-intro__top {
-    margin-bottom: 23px;
-  }
-
-  .about-intro__eyebrow,
-  .about-intro__index {
-    font-size: 9px;
-  }
-
-  .about-intro__heading h1 {
-    font-size: 30px;
-    letter-spacing: -1px;
-  }
-
-  .about-intro__heading h2 {
-    font-size: 24px;
-  }
-
-  .about-intro__role {
-    font-size: 10px;
-    padding: 9px 12px;
-  }
-
-  .about-hero .about-intro .intro-panel__description {
-    font-size: 13px;
-  }
-
-  .about-intro__highlights {
-    gap: 8px;
-    margin-top: 22px;
-    padding: 16px 0;
-  }
-
-  .about-intro__highlight strong {
-    font-size: 14px;
-  }
-
-  .about-intro__highlight span {
-    font-size: 9px;
-  }
-
-  .about-hero .about-intro .intro-panel__actions {
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-
-    .btn {
-      width: 100%;
-    }
-  }
-}
-
-/* ==========================================
-   EXTRA SMALL MOBILE
-========================================== */
-
-@media (max-width: 360px) {
-  .about-page {
-    padding-right: 14px;
-    padding-left: 14px;
-  }
-
-  .about-hero .profile-card {
-    min-height: 420px;
-  }
-
-  .about-hero .about-intro {
-    padding: 23px 18px;
-  }
-
-  .about-intro__heading h1 {
-    font-size: 27px;
-  }
-
-  .about-intro__heading h2 {
-    font-size: 22px;
-  }
-
-  .about-intro__highlights {
-    gap: 6px;
-  }
-}
-
-// ==========================================
-// CONTENT BELOW HERO
-// ==========================================
 
 .about-content {
   width: 100%;
   max-width: 1200px;
-
   margin: 100px auto 40px;
 }
 
-// ==========================================
-// REUSABLE SECTION STYLES
-// ==========================================
+/* ==========================================
+   REUSABLE ABOUT SECTION
+========================================== */
 
 .about-section {
-  width: 95%;
-  background-color: red;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 
+  width: 95%;
   margin-bottom: 90px;
   padding: 45px;
 
@@ -524,49 +301,6 @@
   box-shadow: 0 15px 45px var(--card-shadow);
 
   color: var(--text);
-}
-
-.section-heading {
-  margin-bottom: 35px;
-
-  > span {
-    display: block;
-
-    margin-bottom: 12px;
-
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-
-    color: var(--sidebar-active);
-  }
-
-  h2 {
-    font-family: v.$font-heading;
-    font-size: clamp(26px, 3vw, 38px);
-    font-weight: 800;
-
-    color: var(--text);
-  }
-
-  p {
-    margin-top: 10px;
-
-    font-size: 14px;
-    line-height: 1.7;
-
-    color: var(--muted);
-  }
-}
-
-/* ==========================================
-   SECTION BACKGROUND NUMBER WATERMARKS
-========================================== */
-
-.about-section {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
 
   > *:not(.about-intro__decoration) {
     position: relative;
@@ -581,8 +315,6 @@
     right: 35px;
     bottom: auto;
 
-    // transform: translateY(-40%);
-
     color: var(--sidebar-active);
     opacity: 0.045;
 
@@ -595,16 +327,53 @@
   }
 }
 
-@media (max-width: 600px) {
-  .about-section > .about-intro__decoration {
-    right: 10px;
-    font-size: 190px;
+/* SECTION HEADING */
+
+.section-heading {
+  margin-bottom: 35px;
+
+  > span {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+
+    color: var(--sidebar-active);
+  }
+
+  h2 {
+    font-family: v.$font-heading;
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  p {
+    margin-top: 10px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: var(--muted);
   }
 }
 
-// ==========================================
-// PROFESSIONAL EXPERIENCE
-// ==========================================
+/* EXPERIENCE WATERMARK POSITION */
+
+#experience {
+  .about-intro__decoration {
+    top: auto;
+    right: 35px;
+    bottom: -55px;
+    transform: none;
+  }
+}
+
+/* ==========================================
+   PROFESSIONAL EXPERIENCE TIMELINE
+========================================== */
 
 .timeline {
   display: flex;
@@ -614,7 +383,6 @@
 
 .timeline__item {
   position: relative;
-
   padding: 0 0 25px 25px;
 
   border-left: 2px solid var(--border);
@@ -660,7 +428,6 @@
 
   p {
     max-width: 850px;
-
     margin-top: 10px;
 
     font-size: 14px;
@@ -674,212 +441,255 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.2px;
-
   color: var(--muted);
 }
 
-#experience {
-  .about-intro__decoration {
-    top: auto;
-    bottom: -55px;
-    right: 35px;
-
-    transform: none;
-  }
-}
-
-// ==========================================
-// EDUCATION & CERTIFICATIONS
-// ==========================================
+/* ==========================================
+   EDUCATION — EDITORIAL TIMELINE
+========================================== */
 
 .education-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 25px;
-}
-
-.education-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  margin-top: 45px;
+  padding-left: 8px;
+  gap: 0.5rem;
+}
+
+/* Each education entry */
+
+.education-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 28px minmax(0, 1fr);
+  align-items: start;
+  gap: 22px;
+  padding: 1rem;
   min-width: 0;
-  padding: 21px;
-  overflow: hidden;
-
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 17px;
-
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  transition: none;
+  background-color: var(--card-shadow);
+  border-radius: 8px;
   transition:
-    transform 250ms ease,
-    border-color 250ms ease,
-    box-shadow 250ms ease;
+    border-color 250ms ease-in-out,
+    transform 250ms ease-in-out,
+    box-shadow 250ms ease-in-out;
+  border: 1px solid var(--border);
 
+  &:hover {
+    // transform: translateX(4px);
+    border-color: var(--sidebar-active);
+    box-shadow: 0 8px 24px var(--card-shadow);
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Timeline rail */
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 20px;
-    width: 35px;
-    height: 3px;
-    background: var(--sidebar-active);
-    border-radius: 0 0 5px 5px;
+    top: 8px;
+    bottom: -19px;
+    left: 113px;
+    width: 1px;
+    background: var(--border);
   }
 
-  &:hover {
-    transform: translateY(-4px);
-    border-color: var(--sidebar-active);
-    box-shadow: var(--card-shadow);
+  &:last-child::before {
+    display: none;
+  }
 
-    .education-card__icon {
-      background: var(--sidebar-active);
-      color: #fff;
-      transform: translateY(-2px);
-    }
+  /* Timeline dot */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 108px;
+    width: 11px;
+    height: 11px;
+    background: var(--bg);
+    border: 2px solid var(--sidebar-active);
+    border-radius: 50%;
+    transition:
+      background 250ms ease,
+      background-color 250ms ease,
+      transform 250ms ease;
+  }
+
+  &:hover::after {
+    background: var(--sidebar-active);
+    transform: scale(1.2);
+    background-color: rgb(26, 86, 36);
   }
 
   &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    display: contents;
   }
 
-  &__icon {
-    display: grid;
-    flex: 0 0 43px;
-    width: 43px;
-    height: 43px;
-    place-items: center;
-
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 13px;
-
-    color: var(--sidebar-active);
-    font-size: 19px;
-
-    transition: 250ms ease;
-  }
-
+  /* Year */
   &__year {
-    padding: 6px 11px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 30px;
-
-    color: var(--muted);
-    font-size: 11px;
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 2px;
+    color: var(--sidebar-active);
+    font-size: 14px;
     font-weight: 800;
+    letter-spacing: 0.5px;
   }
 
+  /* Remove the old icon box */
+  &__icon {
+    display: none;
+  }
+
+  /* Main qualification info */
   &__content {
-    margin-top: 21px;
+    grid-column: 3;
+    grid-row: 1;
+    min-width: 0;
+    padding-bottom: 4px;
 
     h3 {
       margin-top: 9px;
       color: var(--text);
-      font-size: 16px;
+      font-size: clamp(16px, 1.5vw, 20px);
       font-weight: 800;
-      line-height: 1.45;
+      line-height: 1.5;
+      transition: color 250ms ease;
     }
 
     p {
       margin-top: 8px;
       color: var(--muted);
-      font-size: 11px;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.8;
     }
   }
 
-  &__level {
+  &:hover &__content h3 {
     color: var(--sidebar-active);
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1.1px;
   }
 
-  &__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+  /* Qualification category */
+  &__level {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
 
-    margin-top: 20px;
-    padding-top: 13px;
-    border-top: 1px solid var(--border);
+  /* Completion status */
+  &__footer {
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
 
     > span:first-child {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
       color: var(--sidebar-active);
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 700;
+
+      i {
+        font-size: 11px;
+      }
     }
   }
 
   &__number {
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 800;
-    opacity: 0.6;
+    display: none;
   }
 }
 
 /* ==========================================
-   EDUCATION RESPONSIVENESS
+   RESPONSIVE
 ========================================== */
-
-@media (max-width: 1100px) {
-  .education-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
 @media (max-width: 600px) {
   .education-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    // gap: 10px;
+    margin-top: 35px;
   }
 
   .education-card {
-    padding: 15px;
+    grid-template-columns: 72px 22px minmax(0, 1fr);
+    gap: 12px;
+    padding-bottom: 35px;
 
-    &__icon {
-      flex-basis: 36px;
-      width: 36px;
-      height: 36px;
-      font-size: 16px;
+    &::before {
+      left: 81px;
+    }
+
+    &::after {
+      left: 76px;
+    }
+
+    &__year {
+      font-size: 12px;
     }
 
     &__content {
       h3 {
-        font-size: 13px;
+        font-size: 14px;
       }
 
       p {
-        font-size: 10px;
+        font-size: 11px;
       }
     }
 
     &__level {
       font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    &__footer {
+      margin-top: 10px;
+
+      > span:first-child {
+        font-size: 10px;
+      }
     }
   }
 }
 
-@media (max-width: 400px) {
-  .education-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 380px) {
+  .education-card {
+    grid-template-columns: 62px 20px minmax(0, 1fr);
+    gap: 10px;
+
+    &::before {
+      left: 71px;
+    }
+
+    &::after {
+      left: 66px;
+    }
+
+    &__year {
+      font-size: 11px;
+    }
+
+    &__content h3 {
+      font-size: 13px;
+    }
   }
 }
 
-// ==========================================
-// SKILLS & EXPERTISE
-// ==========================================
+/* ==========================================
+   SKILLS & EXPERTISE
+========================================== */
 
 .expertise-grid {
   display: grid;
@@ -911,7 +721,6 @@
     box-shadow: 0 12px 28px var(--card-shadow);
   }
 
-  // Top row
   &__top {
     display: flex;
     align-items: center;
@@ -927,7 +736,6 @@
     place-items: center;
 
     border-radius: 12px;
-
     background: var(--bg);
     color: var(--sidebar-active);
 
@@ -941,7 +749,6 @@
     letter-spacing: 1px;
   }
 
-  // Card content
   &__content {
     h3 {
       margin-bottom: 8px;
@@ -960,12 +767,10 @@
     }
   }
 
-  // Skill tags
   &__tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-
     margin-top: auto;
 
     span {
@@ -992,59 +797,9 @@
   }
 }
 
-// ==========================================
-// RESPONSIVE
-// ==========================================
-
-@media (max-width: 900px) {
-  .expertise-grid {
-    gap: 14px;
-  }
-
-  .expertise-card {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .expertise-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin-top: 22px;
-  }
-
-  .expertise-card {
-    padding: 20px;
-
-    &__top {
-      margin-bottom: 16px;
-    }
-
-    &__content {
-      h3 {
-        font-size: 17px;
-      }
-
-      p {
-        margin-bottom: 16px;
-      }
-    }
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .expertise-card {
-    transition: none;
-
-    &:hover {
-      transform: none;
-    }
-  }
-}
-
-// ==========================================
-// PERSONAL INTERESTS
-// ==========================================
+/* ==========================================
+   PERSONAL INTERESTS
+========================================== */
 
 .interests-panel {
   width: 100%;
@@ -1099,7 +854,6 @@
   gap: 10px;
 
   white-space: nowrap;
-
   padding: 14px 18px;
 
   border: 1px solid var(--border);
@@ -1122,9 +876,9 @@
   }
 }
 
-// ==========================================
-// LARGE LAPTOP
-// ==========================================
+/* ==========================================
+   RESPONSIVE — LARGE LAPTOP
+========================================== */
 
 @media (max-width: 1600px) and (min-width: 1101px) {
   .about-hero {
@@ -1135,13 +889,12 @@
       minmax(0, 1.18fr);
   }
 
-  .about-hero .profile-card {
+  .about-hero .profile-card,
+  .about-hero .about-intro {
     min-height: 550px;
   }
 
   .about-hero .about-intro {
-    min-height: 550px;
-
     margin-left: -65px;
     padding: 35px 35px 40px 105px;
   }
@@ -1164,9 +917,58 @@
   }
 }
 
-// ==========================================
-// TABLET LANDSCAPE / SMALL LAPTOP
-// ==========================================
+/* ==========================================
+   RESPONSIVE — LAPTOP
+========================================== */
+
+@media (max-width: 1200px) {
+  .about-page {
+    padding-right: 35px;
+    padding-left: 110px;
+  }
+
+  .about-hero {
+    grid-template-columns:
+      minmax(0, 0.85fr)
+      minmax(0, 1.15fr);
+    gap: 20px;
+  }
+
+  .about-hero .profile-card,
+  .about-hero .about-intro {
+    min-height: 520px;
+  }
+
+  .about-hero .about-intro {
+    padding: 28px;
+  }
+
+  .about-intro__top {
+    margin-bottom: 24px;
+  }
+
+  .about-intro__highlights {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-page {
+    padding-top: 4.3rem;
+  }
+
+  .expertise-grid {
+    gap: 14px;
+  }
+
+  .expertise-card {
+    padding: 20px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE — TABLET LANDSCAPE
+========================================== */
 
 @media (max-width: 1100px) and (min-width: 769px) {
   .about-page {
@@ -1174,8 +976,6 @@
   }
 
   .about-hero {
-    // min-height: 620px;
-
     grid-template-columns:
       minmax(250px, 0.8fr)
       minmax(0, 1.2fr);
@@ -1187,7 +987,6 @@
 
   .about-hero .about-intro {
     min-height: 520px;
-
     margin-left: -45px;
     padding: 35px 25px 35px 85px;
 
@@ -1226,13 +1025,13 @@
   }
 }
 
-// ==========================================
-// TABLET PORTRAIT
-// ==========================================
+/* ==========================================
+   RESPONSIVE — TABLET PORTRAIT
+========================================== */
 
 @media (max-width: 768px) {
   .about-page {
-    padding: 110px 28px 120px;
+    padding: 110px 28px 50px;
   }
 
   .about-hero {
@@ -1249,13 +1048,13 @@
     width: 100%;
     max-width: 480px;
     min-height: 540px;
-
     margin: 0 auto;
   }
 
   .about-hero .about-intro {
     width: 100%;
     min-height: auto;
+    height: auto;
 
     margin: 0;
     padding: 40px 35px;
@@ -1268,9 +1067,9 @@
   }
 
   .about-section {
+    width: 100%;
     margin-bottom: 45px;
     padding: 30px;
-    width: 100%;
   }
 
   .section-heading {
@@ -1318,13 +1117,13 @@
   }
 }
 
-// ==========================================
-// MOBILE
-// ==========================================
+/* ==========================================
+   RESPONSIVE — MOBILE
+========================================== */
 
 @media (max-width: 480px) {
   .about-page {
-    padding: 100px 18px 110px;
+    padding: 100px 18px 50px;
   }
 
   .about-hero {
@@ -1340,7 +1139,6 @@
 
   .about-hero .about-intro {
     padding: 30px 23px;
-
     border-radius: 25px;
 
     h1 {
@@ -1354,6 +1152,59 @@
     }
   }
 
+  .about-intro__top {
+    margin-bottom: 23px;
+  }
+
+  .about-intro__eyebrow,
+  .about-intro__index {
+    font-size: 9px;
+  }
+
+  .about-intro__heading h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+  }
+
+  .about-intro__heading h2 {
+    font-size: 24px;
+  }
+
+  .about-intro__role {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+
+  .about-hero .about-intro .intro-panel__description {
+    font-size: 13px;
+  }
+
+  .about-intro__highlights {
+    gap: 8px;
+    margin-top: 22px;
+    padding: 16px 0;
+  }
+
+  .about-intro__highlight {
+    strong {
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 9px;
+    }
+  }
+
+  .about-hero .about-intro .intro-panel__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
   .about-content {
     margin-top: 50px;
   }
@@ -1361,7 +1212,6 @@
   .about-section {
     margin-bottom: 30px;
     padding: 24px 19px;
-
     border-radius: 20px;
   }
 
@@ -1410,7 +1260,6 @@
   .expertise-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
-
     margin-top: 25px;
   }
 
@@ -1470,7 +1319,6 @@
     gap: 23px;
     margin-top: 25px;
     padding: 23px;
-
     border-radius: 20px;
   }
 
@@ -1492,14 +1340,24 @@
   .interest-tag {
     gap: 8px;
     padding: 10px 13px;
-
     font-size: 12px;
   }
 }
 
-// ==========================================
-// EXTRA SMALL MOBILE
-// ==========================================
+/* ==========================================
+   RESPONSIVE — WATERMARKS
+========================================== */
+
+@media (max-width: 600px) {
+  .about-section > .about-intro__decoration {
+    right: 10px;
+    font-size: 190px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE — EXTRA SMALL MOBILE
+========================================== */
 
 @media (max-width: 360px) {
   .about-page {
@@ -1523,6 +1381,14 @@
     }
   }
 
+  .about-intro__heading h1 {
+    font-size: 27px;
+  }
+
+  .about-intro__heading h2 {
+    font-size: 22px;
+  }
+
   .about-section {
     padding: 21px 16px;
   }
@@ -1539,5 +1405,295 @@
   .interest-tag {
     padding: 9px 11px;
     font-size: 11px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .education-card,
+  .expertise-card,
+  .interest-tag {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+/* =========================================================
+   FOOTBALL STORY — PERSONAL ARCHIVE
+========================================================= */
+
+.football-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 70px);
+  margin-top: 45px;
+  padding: clamp(25px, 4vw, 50px);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: 0 15px 45px var(--card-shadow);
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--sidebar-active);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    i {
+      font-size: 15px;
+    }
+  }
+
+  h3 {
+    margin-top: 25px;
+    color: var(--text);
+    font-family: v.$font-heading;
+    font-size: clamp(30px, 3.5vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+
+    span {
+      color: var(--sidebar-active);
+    }
+  }
+
+  p {
+    max-width: 540px;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    span {
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    strong {
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+
+  &__quote {
+    display: block;
+    margin-top: 28px;
+    color: var(--sidebar-active);
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  /* Certificate card */
+
+  &__certificate {
+    display: block;
+    min-width: 0;
+    padding: 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition:
+      transform 300ms ease,
+      border-color 300ms ease,
+      box-shadow 300ms ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      border-color: var(--sidebar-active);
+      box-shadow: 0 15px 35px var(--card-shadow);
+    }
+  }
+
+  &__certificate-image {
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    background: #e8e7d0;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 440px;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 400ms ease;
+    }
+  }
+
+  &__certificate:hover &__certificate-image img {
+    transform: scale(1.025);
+  }
+
+  &__certificate-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 5px 5px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    span {
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+    }
+
+    strong {
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+
+  &__open {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    display: grid;
+    place-items: center;
+    color: var(--sidebar-active);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    transition: 250ms ease;
+  }
+
+  &__certificate:hover &__open {
+    color: var(--tooltip-text);
+    background: var(--sidebar-active);
+    border-color: var(--sidebar-active);
+  }
+}
+
+/* Dark theme */
+
+[data-theme="dark"] .football-story {
+  &__certificate-image {
+    background: #e8e7d0;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .football-story {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.7fr);
+    gap: 25px;
+    padding: 28px;
+
+    &__details {
+      gap: 10px;
+    }
+
+    &__detail strong {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .football-story {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 30px;
+    padding: 22px;
+    border-radius: 22px;
+
+    h3 {
+      font-size: clamp(32px, 8vw, 42px);
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    &__certificate {
+      width: 100%;
+      max-width: 420px;
+      margin-inline: auto;
+    }
+
+    &__certificate-image img {
+      max-height: 500px;
+    }
+
+    &__details {
+      margin-top: 25px;
+      padding-top: 20px;
+    }
+
+    &__detail span {
+      font-size: 8px;
+    }
+
+    &__detail strong {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .football-story {
+    padding: 17px;
+
+    &__details {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 20px;
+    }
+
+    &__certificate-caption strong {
+      font-size: 12px;
+    }
+  }
+}
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .football-story,
+  .football-story * {
+    transition-duration: 0.01ms !important;
   }
 }

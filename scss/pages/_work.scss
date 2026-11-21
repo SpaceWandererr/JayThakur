@@ -12,7 +12,7 @@
   height: auto;
   overflow: visible;
 
-  // padding: 110px clamp(45px, 8vw, 125px) 70px clamp(110px, 10vw, 155px);
+  padding: 110px clamp(45px, 8vw, 125px) 70px clamp(110px, 10vw, 155px);
   margin: 65px auto 95px;
 
   color: var(--text);
@@ -938,7 +938,7 @@
 
 @media (max-width: 768px) {
   .work-page {
-    padding: 100px 20px 20px 20px;
+    padding: 0px 20px 20px 20px;
   }
 }
 
@@ -948,7 +948,7 @@
 
 @media (max-width: 600px) {
   .work-page {
-    padding: 100px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
   }
 
   .work-intro {
@@ -966,7 +966,7 @@
   }
 
   .work-section {
-    margin-bottom: 80px;
+    margin-bottom: 35px;
   }
 
   .work-section__heading {

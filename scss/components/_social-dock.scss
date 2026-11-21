@@ -341,10 +341,16 @@
 // MOBILE
 // ========================================
 
-@media (max-width: 480px) {
+@media (max-width: 428px) {
   .social-dock {
     top: 15px;
-    left: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-dock {
+    top: 18px;
+    // left: 18px;
 
     width: 44px;
 
@@ -366,8 +372,8 @@
 @media (max-width: 370px) {
   .social-dock {
     position: absolute;
-    top: 4.5rem;
-    left: 82.5vw;
+    top: 18px;
+    // left: 82.5vw;
   }
 
   .social-dock[open] .social-dock__nav {
