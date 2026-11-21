@@ -4,7 +4,7 @@
 
 .skills-page {
   min-height: 100vh;
-  padding: 110px 120px 20px 130px;
+  padding: 110px 120px 90px 130px;
   background: var(--bg);
   color: var(--text);
 }
@@ -553,6 +553,7 @@
   .skills-page {
     padding-right: 85px;
     padding-left: 110px;
+    padding-bottom: 120px;
   }
 
   .skills-grid {
