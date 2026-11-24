@@ -3095,6 +3095,7 @@ button,
   transform: translateX(4px);
   border-color: var(--sidebar-active);
   box-shadow: 0 8px 24px var(--card-shadow);
+  color: #111;
 }
 .qualification-item__year {
   color: var(--sidebar-active);
@@ -3140,7 +3141,10 @@ button,
 .qualification-item__link:hover {
   background: var(--sidebar-active);
   border-color: var(--sidebar-active);
-  color: #fff;
+  color: #010101;
+}
+.qualification-item .fa-arrow-up-right-from-square:hover {
+  color: black;
 }
 
 @media (max-width: 600px) {
@@ -3568,7 +3572,7 @@ button,
   grid-template-columns: 100px 28px minmax(0, 1fr);
   align-items: start;
   gap: 22px;
-  padding: 1rem;
+  padding: 0.5rem;
   min-width: 0;
   background: transparent;
   border: 0;
@@ -3584,9 +3588,6 @@ button,
 .education-card:hover {
   border-color: var(--sidebar-active);
   box-shadow: 0 8px 24px var(--card-shadow);
-}
-.education-card:last-child {
-  padding-bottom: 0;
 }
 .education-card {
   /* Timeline rail */

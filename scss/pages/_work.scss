@@ -1426,6 +1426,7 @@
     transform: translateX(4px);
     border-color: var(--sidebar-active);
     box-shadow: 0 8px 24px var(--card-shadow);
+    color: #111;
   }
 
   // Year
@@ -1491,8 +1492,12 @@
     &:hover {
       background: var(--sidebar-active);
       border-color: var(--sidebar-active);
-      color: #fff;
+      color: #010101;
     }
+  }
+
+  .fa-arrow-up-right-from-square:hover {
+    color: black;
   }
 }
 
